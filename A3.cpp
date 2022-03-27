@@ -1,31 +1,30 @@
-#include<iostream>
+//specific char program
 
+
+
+#include<iostream>
 using namespace std;
-class Marvellous
+
+void swap(char *p,char *q)
 {
-	public:
-		int Addition(int x,int y)
-		{
-			int iAns=0;
-			iAns=x+y;
-			return iAns;
-		}	
-};	
+	char temp;
+	
+	temp=*p;
+	*p=*q;
+	*q=temp;
+}	
 int main()
 {
-	int iNo=0,iNo1=0,iRet=0;
+	char x='\0',y='\0';
 	
-	Marvellous mobj;
+	cout<<"enter first number\n";
+	cin>>x;
 	
-	cout<<"Enter first number\n";
-	cin>>iNo;
+	cout<<"enter second number\n";
+	cin>>y;
 	
-	cout<<"Enter Second number\n";
-	cin>>iNo1;
-	
-	iRet=mobj.Addition(iNo,iNo1);
-	
-	cout<<"Addition is \n"<<iRet;
-	
+	swap(&x,&y);
+	cout<<"value of x becomes"<<x<<"\n";
+	cout<<"value of x becomes"<<y<<"\n";
 	return 0;
 }	
